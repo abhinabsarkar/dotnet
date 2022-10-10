@@ -5,7 +5,9 @@ The web application does the following:
 * displays the hosting environment details & the current system time
 * invokes a remote backend
 * uses appsettings for different environments like development, production
-* accepts Environment Variables
+* accepts Environment Variables namely
+    * ASPNETCORE_ENVIRONMENT (dotnet in-built)
+    * DB_NAME (custom)
 
 ![alt txt](/images/dotnetapp1.jpg)
 
