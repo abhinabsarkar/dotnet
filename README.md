@@ -9,6 +9,13 @@ The web application does the following:
     * ASPNETCORE_ENVIRONMENT (dotnet in-built)
     * DB_NAME (custom)
 
+```bash
+# Run the application by loading the appsettings file
+dotnet run --environment Production
+
+dotnet run --environment Development
+```
+
 ![alt txt](/images/dotnetapp1.jpg)
 
 ![alt txt](/images/dotnetapp2.jpg)
