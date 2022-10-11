@@ -39,8 +39,9 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             @* &copy; helloworld - <a asp-area="" asp-page="/Privacy">Privacy</a> *@
-            <p>Environment variable - @(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")) - Current system time - @DateTime.Now</p>
-            <p>Environment variable - @(Environment.GetEnvironmentVariable("DB_NAME"))</p>
+            <p>Current system time - @DateTime.Now</p>
+            <p>Environment variable Name: ASPNETCORE_ENVIRONMENT --> Value - @(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"))</p>
+            <p>Environment variable Name: DB_NAME --> Value - @(Environment.GetEnvironmentVariable("DB_NAME"))</p>
         </div>
     </footer>
 
