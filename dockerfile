@@ -21,6 +21,9 @@ RUN apk --no-cache add curl
 WORKDIR /app
 COPY --from=build /app ./
 
+# Add default user
+RUN adduser 1001 --disabled-password
+
 # Switches to a non-root user and changes the ownership of the /app folder"
 RUN chown -R 1001 /app && chgrp -R 1001 /app
 # Provide write access to the group
