@@ -20,4 +20,5 @@ RUN apk --no-cache add curl
 # Copy the image built in previously
 WORKDIR /app
 COPY --from=build /app ./
+USER 1001
 ENTRYPOINT ["dotnet", "dotnet-helloworld.dll"]
