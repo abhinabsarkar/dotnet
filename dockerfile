@@ -20,5 +20,12 @@ RUN apk --no-cache add curl
 # Copy the image built in previously
 WORKDIR /app
 COPY --from=build /app ./
+
+# Switches to a non-root user and changes the ownership of the /app folder"
+RUN chown -R 1001 /app && chgrp -R 1001 /app
+# Provide write access to the group
+RUN chmod -R 777 /app
+# Run container by default as user with id 1001 (default)
 USER 1001
+
 ENTRYPOINT ["dotnet", "dotnet-helloworld.dll"]
